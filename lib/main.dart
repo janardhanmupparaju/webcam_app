@@ -49,6 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // TODO: implement initState
     super.initState();
 
+    initwebcam();
+  }
+
+  initwebcam() {
     // Create a video element which will be provided with stream source
     _webcamVideoElement = VideoElement();
     // Register an webcam
@@ -75,20 +79,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: //Container(width: 500, height: 500, child: _webcamWidget),
-            Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Container(width: 500, height: 500, child: _webcamWidget),
-          ],
-        ),
+        child: Container(width: 500, height: 500, child: _webcamWidget),
+        //     Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: <Widget>[
+        //     Text(
+        //       'You have pushed the button this many times:',
+        //     ),
+        //     Text(
+        //       '$_counter',
+        //       style: Theme.of(context).textTheme.headline4,
+        //     ),
+        //     Container(width: 500, height: 500, child: _webcamWidget),
+        //   ],
+        // ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
